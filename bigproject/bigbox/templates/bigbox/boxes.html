@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block page_title %}Boxes List{% endblock page_title %} {% block body %}
+<h1>Boxes List</h1>
+<form action="{% url 'boxes' %}" method="post">
+  {% csrf_token %}
+  <input name="box_slug" type="slug" />
+  <button>Search</button>
+</form>
+<ul>
+  {% for box in boxes %}
+  <li><a href="{% url 'box_detail' box.id %}">{{box.name}}</a></li>
+  {% endfor %}
+</ul>
+{% endblock body %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block page_title %}Box Detail{% endblock page_title %} {% block body %}
+<h1>Box Detail</h1>
+<ul>
+  <li>{{box.name}}</li>
+  <li>{{box.description}}</li>
+  <li>{{box.price}}</li>
+  <li>
+    <div>Box Activities:</div>
+    <ul>
+      {% for activity in box_activities %}
+      <li>{{activity.name}}</li>
+      {% endfor %}
+      <li><a href="{% url 'box_activities' box.id %}">Ver todas...</a></li>
+    </ul>
+  </li>
+</ul>
+{% endblock body %}
