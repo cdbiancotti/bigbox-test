@@ -9,6 +9,8 @@ python-dotenv = "*"
 autopep8 = "*"
 pylint = "*"
 psycopg2 = "*"
+gunicorn = "*"
+django-heroku = "*"
 
 [dev-packages]
 
