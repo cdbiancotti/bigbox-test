@@ -28,7 +28,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['immense-hollows-40437.herokuapp.com']
+ALLOWED_HOSTS = ['bigbox-test.herokuapp.com']
 
 
 # Application definition
@@ -129,4 +129,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
 django_heroku.settings(locals())

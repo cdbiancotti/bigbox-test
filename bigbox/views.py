@@ -28,11 +28,14 @@ def box(request, box_id):
 
 
 def box_activities(request, box_id):
-    page_number = request.GET.get('page')
+    if request.GET.get('page'):
+        page_number = request.GET.get('page')
+    else:
+        page_number = 1
     box = get_object_or_404(Box, pk=box_id)
     box_activities = box.activities.order_by('name')
     pages = Paginator(box_activities, 20)
-    page_selected = pages.page(page_number)
+    page_selected = pages.page(int(page_number))
     return render(request, 'bigbox/box_activities.html', {'box_id': box_id, 'page_selected': page_selected})
 
 
