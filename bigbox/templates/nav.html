@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block body %} {% block nav %}
+<nav class="navbar navbar-light bg-light sticky-top">
+  <div class="container-fluid justify-content-start">
+    <input type="button" class="btn btn-light" value="<<" onclick="history.back(-1)" />
+    <a class="navbar-brand" href="{% url 'boxes' %}">BigBox</a>
+  </div>
+</nav>
+{% endblock nav %}
+<div class="container">{% block main %}{% endblock main %}</div>
+{% endblock body %}

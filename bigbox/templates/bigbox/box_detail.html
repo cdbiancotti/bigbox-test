@@ -1,17 +1,22 @@
-{% extends 'base.html' %} {% block page_title %}Box Detail{% endblock page_title %} {% block body %}
-<h1>Box Detail</h1>
-<ul>
-  <li>{{box.name}}</li>
-  <li>{{box.description}}</li>
-  <li>{{box.price}}</li>
-  <li>
-    <div>Box Activities:</div>
+{% extends 'nav.html' %} {% block page_title %}Box Detail{% endblock page_title %} {% block main %}
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Box {{box.name}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{box.category.name}}{% if box.slug %} - {{box.slug}} {% endif %}</h6>
+    <span class="badge bg-primary">Price: ${{box.price}}</span>
+    {% if box.purchase_available %}
+    <span class="badge bg-success">In stock</span>
+    {% else %}
+    <span class="badge bg-danger">Out of Stock</span>
+    {% endif %}
+    <p class="card-text pt-2">{{box.description}}</p>
+    <div>Activities:</div>
     <ul>
       {% for activity in box_activities %}
       <li>{{activity.name}}</li>
       {% endfor %}
-      <li><a href="{% url 'box_activities' box.id %}">Ver todas...</a></li>
+      <a href="{% url 'box_activities' box.id %}" class="card-link">Ver todas las actividades...</a>
     </ul>
-  </li>
-</ul>
-{% endblock body %}
+  </div>
+</div>
+{% endblock main %}

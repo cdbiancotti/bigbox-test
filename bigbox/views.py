@@ -4,7 +4,7 @@ from django.core.paginator import Paginator
 
 
 def index(request):
-    return render(request, 'bigbox/index.html')
+    return redirect('/box')
 
 
 def boxes(request):
@@ -36,7 +36,7 @@ def box_activities(request, box_id):
     box_activities = box.activities.order_by('name')
     pages = Paginator(box_activities, 20)
     page_selected = pages.page(int(page_number))
-    return render(request, 'bigbox/box_activities.html', {'box_id': box_id, 'page_selected': page_selected})
+    return render(request, 'bigbox/box_activities.html', {'box': box, 'page_selected': page_selected})
 
 
 def activity(request, box_id, activity_id):

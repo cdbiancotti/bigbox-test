@@ -1,13 +1,13 @@
-{% extends 'base.html' %} {% block page_title %}Boxes List{% endblock page_title %} {% block body %}
-<h1>Boxes List</h1>
+{% extends 'nav.html' %} {% block page_title %}Boxes List{% endblock page_title %} {% block main %}
+<h1 class="">Boxes List</h1>
 <form action="{% url 'boxes' %}" method="post">
   {% csrf_token %}
-  <input name="box_slug" type="slug" />
+  <input name="box_slug" type="slug" placeholder="Insert a box slug..." />
   <button>Search</button>
 </form>
-<ul>
+<ul class="list-group">
   {% for box in boxes %}
-  <li><a href="{% url 'box_detail' box.id %}">{{box.name}}</a></li>
+  <a class="list-group-item list-group-item-action" href="{% url 'box_detail' box.id %}">{{box.name}}</a>
   {% endfor %}
 </ul>
-{% endblock body %}
+{% endblock main %}

@@ -1,7 +1,14 @@
-{% extends 'base.html' %} {% block page_title %}Activity Detail{% endblock page_title %} {% block body %}
-<h1>Activity Detail</h1>
-<ul>
-  <li>{{activity.name}}</li>
-  <li>{{activity.description}}</li>
-</ul>
-{% endblock body %}
+{% extends 'nav.html' %} {% block page_title %}Activity Detail{% endblock page_title %} {% block main %}
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Activity {{activity.name}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{activity.category.name}}</h6>
+    {% if activity.purchase_available %}
+    <span class="badge bg-success">In stock</span>
+    {% else %}
+    <span class="badge bg-danger">Out of Stock</span>
+    {% endif %}
+    <p class="card-text pt-2">{{activity.description}}</p>
+  </div>
+</div>
+{% endblock main %}
