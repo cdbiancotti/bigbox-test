@@ -18,6 +18,7 @@ django-debug-toolbar = "*"
 werkzeug = "*"
 ipython = "*"
 ipdb = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 
