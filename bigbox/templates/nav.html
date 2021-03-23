@@ -2,7 +2,8 @@
 <nav class="navbar navbar-light bg-light sticky-top">
   <div class="container-fluid justify-content-start">
     <input type="button" class="btn btn-light" value="<<" onclick="history.back(-1)" />
-    <a class="navbar-brand" href="{% url 'boxes' %}">BigBox</a>
+    <a class="navbar-brand" href="{% url 'bigbox:boxes' %}">BigBox</a>
+    <a class="navbar-brand" href="{% url 'polls:index' %}">Polls</a>
   </div>
 </nav>
 {% endblock nav %}

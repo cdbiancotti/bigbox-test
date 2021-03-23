@@ -16,6 +16,8 @@ pygments = "*"
 django-extensions = "*"
 django-debug-toolbar = "*"
 werkzeug = "*"
+ipython = "*"
+ipdb = "*"
 
 [dev-packages]
 

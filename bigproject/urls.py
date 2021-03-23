@@ -18,8 +18,9 @@ from django.urls import path, include
 from django.conf import settings
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include("bigbox.urls")),
+    path(r'admin/', admin.site.urls),
+    path(r'', include("bigbox.urls")),
+    path(r'polls/', include("polls.urls")),
 ]
 
 if settings.DEBUG:

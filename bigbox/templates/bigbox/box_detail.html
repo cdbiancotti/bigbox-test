@@ -15,7 +15,7 @@
       {% for activity in box_activities %}
       <li>{{activity.name}}</li>
       {% endfor %}
-      <a href="{% url 'box_activities' box.id %}" class="card-link">Ver todas las actividades...</a>
+      <a href="{% url 'bigbox:box_activities' box.id %}" class="card-link">Ver todas las actividades...</a>
     </ul>
   </div>
 </div>

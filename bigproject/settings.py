@@ -41,8 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bigbox',
     'debug_toolbar',
+    'django_extensions',
+    'bigbox.apps.BigboxConfig',
+    'polls.apps.PollsConfig'
 ]
 
 MIDDLEWARE = [
