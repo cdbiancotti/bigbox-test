@@ -11,6 +11,11 @@ pylint = "*"
 psycopg2 = "*"
 gunicorn = "*"
 django-heroku = "*"
+djangorestframework = "*"
+pygments = "*"
+django-extensions = "*"
+django-debug-toolbar = "*"
+werkzeug = "*"
 
 [dev-packages]
 
