@@ -21,7 +21,7 @@ urlpatterns = [
     path(r'admin/', admin.site.urls),
     path(r'', include("bigbox.urls")),
     path(r'polls/', include("polls.urls")),
-    path(r'tutorial1/', include("snippets.urls")),
+    # path(r'tutorial1/', include("snippets.urls")),
     path(r'api-auth/', include('rest_framework.urls')),
 ]
 
