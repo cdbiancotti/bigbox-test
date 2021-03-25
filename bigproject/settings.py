@@ -44,9 +44,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'debug_toolbar',
     'django_extensions',
-    'bigbox.apps.BigboxConfig',
-    'polls.apps.PollsConfig',
-    'snippets.apps.SnippetsConfig'
+    'bigbox',
+    'polls',
+    'snippets'
 ]
 
 MIDDLEWARE = [
