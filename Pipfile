@@ -18,7 +18,7 @@ django-debug-toolbar = "*"
 werkzeug = "*"
 ipython = "*"
 ipdb = "*"
-
+pexpect = "*"
 [dev-packages]
 
 [requires]
