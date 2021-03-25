@@ -19,6 +19,10 @@ werkzeug = "*"
 ipython = "*"
 ipdb = "*"
 pexpect = "*"
+graphene-django = "*"
+django-cors-headers = "*"
+django-graphiql = "*"
+
 [dev-packages]
 
 [requires]
