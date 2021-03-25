@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'bigbox.apps.BigboxConfig',
     'polls.apps.PollsConfig',
-    # 'snippets.apps.SnippetsConfig'
+    'snippets.apps.SnippetsConfig'
 ]
 
 MIDDLEWARE = [
