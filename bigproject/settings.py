@@ -28,7 +28,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['bigbox-test.herokuapp.com',
+ALLOWED_HOSTS = ['tutorial-mix.herokuapp.com',
                  'localhost', '0.0.0.0', '127.0.0.1']
 
 
