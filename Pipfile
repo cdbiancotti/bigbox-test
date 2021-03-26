@@ -22,6 +22,7 @@ pexpect = "*"
 graphene-django = "*"
 django-cors-headers = "*"
 django-graphiql = "*"
+django-filter = "*"
 
 [dev-packages]
 
