@@ -1,4 +1,8 @@
-{% extends 'nav.html' %} {% block page_title %}Polls List{% endblock page_title %} {% block main %}
+{% extends 'nav.html' %} {% load static %} {% block page_title %}Polls List{% endblock page_title %} 
+{% block head_extension %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+{% endblock head_extension %}
+{% block main %}
 <h1 class="">Polls List</h1>
 {% if latest_question_list %}
 <ul>
